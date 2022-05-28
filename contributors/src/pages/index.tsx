@@ -6,6 +6,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Card from "../components/card/index";
 import Table from '../components/table';
 import Pagination from '../components/pagination';
+import { Main, List } from "../styles/HomePage/styles";
+import Subtitle from '../components/subtitle';
 
 const Home: NextPage = () => {
   interface Collaborators {
@@ -50,21 +52,26 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <main>
-        <Table
-          fullName='Nome completo'
-          department='Departamento'
-          role='Cargo'
-          branch='Unidade'
-          status='Status'
+      <Main>
+        <Subtitle
+          subtitle='Lista de colaboradores'
         />
-        {collaborators?.filter((item, index) => {
-          if (index <= 5) {
-            return item;
-          }
-        })}
-        <Pagination/>
-      </main>
+        <List>
+          <Table
+            fullName='Nome completo'
+            department='Departamento'
+            role='Cargo'
+            branch='Unidade'
+            status='Status'
+          />
+          {collaborators?.filter((item, index) => {
+            if (index <= 5) {
+              return item;
+            }
+          })}
+          <Pagination/>
+        </List>
+      </Main>
     </div>
   );
 };
