@@ -3,11 +3,8 @@ import { useEffect, useState } from 'react';
 import * as services from "../services/httpApiRequests";
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Card from "../components/card/index";
-import Table from '../components/table';
-import Pagination from '../components/pagination';
+import { Card, Pagination, Table, Subtitle } from "../components";
 import { Main, List } from "../styles/HomePage/styles";
-import Subtitle from '../components/subtitle';
 
 const Home: NextPage = () => {
   interface Collaborators {

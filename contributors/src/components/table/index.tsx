@@ -16,23 +16,29 @@ type Props = {
     status: string
 };
 
-const Table: FunctionComponent<Props> = (props) =>{
+const Table: FunctionComponent<Props> = ({
+    fullName,
+    department,
+    role,
+    branch,
+    status
+}) =>{
     return(
         <Container>
             <FullName>
-                <p>{props.fullName}</p>
+                <p>{fullName}</p>
             </FullName>
             <Department>
-                <p>{props.department}</p>
+                <p>{department}</p>
             </Department>
             <Role>
-                <p>{props.role}</p>
+                <p>{role}</p>
             </Role>
             <Branch>
-                <p>{props.branch}</p>
+                <p>{branch}</p>
             </Branch>
             <Status>
-                <p>{props.status}</p>
+                <p>{status}</p>
             </Status>
         </Container>
     );
