@@ -5,6 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Card from "../components/card/index";
 import Table from '../components/table';
+import Pagination from '../components/pagination';
 
 const Home: NextPage = () => {
   interface Collaborators {
@@ -62,6 +63,7 @@ const Home: NextPage = () => {
             return item;
           }
         })}
+        <Pagination/>
       </main>
     </div>
   );

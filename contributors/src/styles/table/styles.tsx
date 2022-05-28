@@ -10,7 +10,8 @@ export const Container = styled.div`
     height: 49px;
     border: 1px solid #CAD6D1;
     border-radius: 8px 8px 0px 0px;
-    font-weight: 600;    
+    font-weight: 600;
+    
 `;
 
 export const Columns = styled.div`
