@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import * as services from "../services/httpApiRequests";
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import styles from '../styles/Home.module.css';
 import Card from "../components/card/index";
+import Table from '../components/table';
 
 const Home: NextPage = () => {
   interface Collaborators {
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
   useEffect(() => {
     getListOfContributors();
   }, []);
-  console.log(collaborator)
 
   const collaborators = collaborator?.map(collaborator => {
     return <Card
@@ -51,6 +50,13 @@ const Home: NextPage = () => {
   return (
     <div>
       <main>
+        <Table
+          fullName='Nome completo'
+          department='Departamento'
+          role='Cargo'
+          branch='Unidade'
+          status='Status'
+        />
         {collaborators?.filter((item, index) => {
           if (index <= 5) {
             return item;

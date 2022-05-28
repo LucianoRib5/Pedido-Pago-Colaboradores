@@ -7,6 +7,7 @@ import {
     Role,
     Branch,
     Status,
+    TxtStatus,
     More
 } from "../../styles/card/styles";
 
@@ -38,8 +39,10 @@ const Card: FunctionComponent<Props> = (props) =>{
             <Branch>
                 <p>{props.branch}</p>
             </Branch>
-            <Status status={props.status}>
-                <p>{props.status}</p>
+            <Status>
+                <TxtStatus status={props.status}>
+                    <p>{props.status}</p>
+                </TxtStatus>
             </Status>
             <More>
                 {props.more}                        

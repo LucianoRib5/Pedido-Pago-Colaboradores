@@ -4,15 +4,16 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 902px;
     height: 68px;
     padding: 16px;
-    width: 902px;
     border-bottom: 1px solid #EAEFED;
 `;
 
 export const Avatar = styled.div`
     display: flex;
     align-items: center;
+    width: 196px;
     gap: 8px;
 `;
 
@@ -20,7 +21,7 @@ export const Name = styled.div`
     display: flex;
     align-items: center;
     width: 113px;
-    height: 34px;
+    height: 17px;
     font-weight: 600;
     font-size: 12px;
 `;
@@ -51,7 +52,14 @@ interface StatusColor {
     status: string;
 };
 
-export const Status = styled.div<StatusColor>`
+export const Status = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 134px;
+    height: 24px;
+`;
+export const TxtStatus = styled.p<StatusColor>`
     display: flex;
     justify-content: center;
     align-items: center;
