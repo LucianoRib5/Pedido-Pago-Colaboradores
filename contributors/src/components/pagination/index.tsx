@@ -40,7 +40,6 @@ const Pagination: FunctionComponent = () =>{
                     </ArrowRight>
                 </Arrows>                
             </Pages>
-
         </Container>
     );
 };

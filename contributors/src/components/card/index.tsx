@@ -21,31 +21,39 @@ type Props = {
     more: ReactNode
 };
 
-const Card: FunctionComponent<Props> = (props) =>{
+const Card: FunctionComponent<Props> = ({
+    img,
+    name,
+    department,
+    role,
+    branch,
+    status,
+    more
+}) =>{
     return(
         <Container>
             <Avatar>
-                {props.img}
+                {img}
                 <Name>
-                    <p>{props.name}</p>
+                    <p>{name}</p>
                 </Name>
             </Avatar>
             <Department>
-                <p>{props.department}</p>
+                <p>{department}</p>
             </Department>
             <Role>
-                <p>{props.role}</p>
+                <p>{role}</p>
             </Role>
             <Branch>
-                <p>{props.branch}</p>
+                <p>{branch}</p>
             </Branch>
             <Status>
-                <TxtStatus status={props.status}>
-                    <p>{props.status}</p>
+                <TxtStatus status={status}>
+                    <p>{status}</p>
                 </TxtStatus>
             </Status>
             <More>
-                {props.more}                        
+                {more}                        
             </More>            
         </Container>
     );
