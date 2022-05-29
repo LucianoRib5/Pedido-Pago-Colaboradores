@@ -6,5 +6,16 @@ import Input from "./input";
 import Category from "./category";
 import Header from "./header";
 import Sidebar from "./sidebar";
+import Title from "./title";
 
-export { Card, Pagination, Subtitle, Table, Input, Category, Header, Sidebar };
+export { 
+    Card, 
+    Pagination, 
+    Subtitle, 
+    Table, 
+    Input, 
+    Category, 
+    Header, 
+    Sidebar,
+    Title
+};

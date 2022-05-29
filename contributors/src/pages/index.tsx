@@ -3,7 +3,18 @@ import { useEffect, useState } from 'react';
 import * as services from "../services/httpApiRequests";
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Card, Pagination, Table, Subtitle, Input, Category, Header, Sidebar } from "../components";
+import { 
+  Card, 
+  Pagination, 
+  Table, 
+  Subtitle, 
+  Input, 
+  Category, 
+  Header, 
+  Sidebar,
+  Title 
+}
+ from "../components";
 import { Container, Main, Content, List, Tab } from "../styles/HomePage/styles";
 
 const Home: NextPage = () => {
@@ -54,6 +65,7 @@ const Home: NextPage = () => {
         <Sidebar/>
         <Main>
           <Content>
+            <Title/>
             <Tab>
               <Category
                 contributors='Colaboradores'
@@ -85,9 +97,7 @@ const Home: NextPage = () => {
           </Content>
         </Main>
       </Container>
-
     </div>
-
   );
 };
 
