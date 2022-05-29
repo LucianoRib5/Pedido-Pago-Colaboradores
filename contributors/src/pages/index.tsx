@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import * as services from "../services/httpApiRequests";
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Card, Pagination, Table, Subtitle } from "../components";
-import { Main, List } from "../styles/HomePage/styles";
+import { Card, Pagination, Table, Subtitle, Input, Category, Header, Sidebar } from "../components";
+import { Container, Main, Content, List, Tab } from "../styles/HomePage/styles";
 
 const Home: NextPage = () => {
   interface Collaborators {
@@ -32,10 +32,10 @@ const Home: NextPage = () => {
   const collaborators = collaborator?.map(collaborator => {
     return <Card
       img={
-        <Avatar 
-          src={collaborator.image} 
-          alt={collaborator.name} 
-          style={{width: "32px", height: "32px"}} 
+        <Avatar
+          src={collaborator.image}
+          alt={collaborator.name}
+          style={{ width: "32px", height: "32px" }}
         />
       }
       name={collaborator.name}
@@ -49,27 +49,45 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Main>
-        <Subtitle
-          subtitle='Lista de colaboradores'
-        />
-        <List>
-          <Table
-            fullName='Nome completo'
-            department='Departamento'
-            role='Cargo'
-            branch='Unidade'
-            status='Status'
-          />
-          {collaborators?.filter((item, index) => {
-            if (index <= 5) {
-              return item;
-            }
-          })}
-          <Pagination/>
-        </List>
-      </Main>
+      <Header/>
+      <Container>
+        <Sidebar/>
+        <Main>
+          <Content>
+            <Tab>
+              <Category
+                contributors='Colaboradores'
+                roles='Cargos'
+                borderContributors='2px solid #22E0A1'
+              />
+              <Input/>
+              <Subtitle
+                subtitle='Lista de colaboradores'
+              />
+              <List>
+                <Table
+                  fullName='Nome completo'
+                  department='Departamento'
+                  role='Cargo'
+                  branch='Unidade'
+                  status='Status'
+                />
+                <div>
+                  {collaborators?.filter((item, index) => {
+                    if (index <= 5) {
+                      return item;
+                    }
+                  })}
+                </div>
+                <Pagination />
+              </List>
+            </Tab>
+          </Content>
+        </Main>
+      </Container>
+
     </div>
+
   );
 };
 
