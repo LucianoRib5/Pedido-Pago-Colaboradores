@@ -11,18 +11,18 @@
 
 Ferramentas utilizadas na construção do projeto:
 
+- [Next.js](https://nextjs.org/)
 - [React.js](https://pt-br.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Styled-components](https://styled-components.com/)
 - [Material-UI](https://v4.mui.com/pt/)
-- [Yup](https://github.com/jquense/yup)
-
+- [Axios](https://axios-http.com/docs/intro)
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [VSCode](https://code.visualstudio.com/)
 
-### 🖥️ Rodando o Front end
+### 🖥️ Rodando a aplicação
 
 ```bash
 
@@ -47,7 +47,9 @@ $ npm run dev
 ### 📱 Layout 
 ![image](https://user-images.githubusercontent.com/89327618/171067447-6feb85ca-1424-4e6a-b08e-ea05d966d5cb.png)
 
-
+<h3 align="center"> 
+	🚧 Em construção...  🚧
+</h3>
 
 ### Autor
 ---
