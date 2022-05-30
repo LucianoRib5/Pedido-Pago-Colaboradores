@@ -1,21 +1,10 @@
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
-import * as services from "../services/httpApiRequests";
+import * as services from "../src/services/httpApiRequests";
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { 
-  Card, 
-  Pagination, 
-  Table, 
-  Subtitle, 
-  Input, 
-  Category, 
-  Header, 
-  Sidebar,
-  Title 
-}
- from "../components";
-import { Container, Main, Content, List, Tab } from "../styles/HomePage/styles";
+import { Card, Pagination, Table, Subtitle, Input, Category, Header, Sidebar } from "../src/components";
+import { Container, Main, Content, List, Tab } from "../src/styles/HomePage/styles";
 
 const Home: NextPage = () => {
   interface Collaborators {
@@ -42,7 +31,6 @@ const Home: NextPage = () => {
 
   const collaborators = collaborator?.map(collaborator => {
     return <Card
-      key={collaborator.agent_id}
       img={
         <Avatar
           src={collaborator.image}
@@ -66,7 +54,6 @@ const Home: NextPage = () => {
         <Sidebar/>
         <Main>
           <Content>
-            <Title/>
             <Tab>
               <Category
                 contributors='Colaboradores'
@@ -98,7 +85,9 @@ const Home: NextPage = () => {
           </Content>
         </Main>
       </Container>
+
     </div>
+
   );
 };
 
